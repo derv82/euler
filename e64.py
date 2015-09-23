@@ -1,9 +1,9 @@
 #!/usr/bin/python
 
-import math
+from math import sqrt
 
 def get_period(n):
-	s = math.sqrt(n)
+	s = sqrt(n)
 	result = []
 	temp = s
 	for i in xrange(0, 17):
@@ -39,7 +39,7 @@ n = 1
 ncount = 0
 while True:
 	n += 1
-	if math.sqrt(n) == int(math.sqrt(n)): continue
+	if sqrt(n) == int(sqrt(n)): continue
 	ncount += 1
 	if ncount > 10000: break
 	if len(get_period(n)) % 2 != 0:
